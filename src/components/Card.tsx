@@ -9,8 +9,8 @@ function Card({ country, lightMode }: Props | any) {
     <div
       className={
         lightMode
-          ? "bg-gray-100 rounded-lg text-black shadow-2xl"
-          : "bg-gray-700 rounded-lg text-white"
+          ? "bg-gray-100 rounded-lg text-black shadow-2xl max-w-[300px] max-sm:m-auto"
+          : "bg-gray-700 rounded-lg text-white max-w-[300px] max-sm:m-auto"
       }
     >
       <div>

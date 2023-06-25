@@ -37,20 +37,20 @@ function App() {
     <div
       className={
         lightMode
-          ? "container bg-gray-100 min-h-screen m-auto min-w-full"
+          ? "container bg-gray-100 min-h-screen m-auto min-w-full" 
           : "container bg-gray-800 min-h-screen m-auto min-w-full"
       }
     >
       <nav
-        className={lightMode ? "bg-white h-20 shadow-xl" : "bg-gray-700 h-20"}
+        className={lightMode ? "bg-white h-20 shadow-xl " : "bg-gray-700 h-20"}
       >
-        <div className="flex flex-row justify-between px-10 h-full items-center">
+        <div className="flex flex-row justify-between px-10 h-full items-center max-mobile:px-3">
           <a href="/">
             <h1
               className={
                 lightMode
-                  ? "text-black text-3xl font-black"
-                  : "text-white text-3xl font-black"
+                  ? "text-black text-3xl font-black max-sm:text-2xl max-mobile:text-base"
+                  : "text-white text-3xl font-black max-sm:text-2xl max-mobile:text-base"
               }
             >
               Where in the world?
@@ -59,8 +59,8 @@ function App() {
           <button
             className={
               lightMode
-                ? "hover:bg-gray-200 font-bold py-2 px-4 rounded inline-flex items-center text-black"
-                : "hover:bg-gray-400 font-bold py-2 px-4 rounded inline-flex items-center text-white"
+                ? "hover:bg-gray-200 font-bold py-2 px-4 rounded inline-flex items-center text-black max-mobile:px-1"
+                : "hover:bg-gray-400 font-bold py-2 px-4 rounded inline-flex items-center text-white max-mobile:px-1"
             }
             onClick={handleLightMode}
           >
@@ -95,14 +95,14 @@ function App() {
                 />
               </svg>
             )}
-            <span className="mx-2">
+            <span className="mx-2 max-mobile:text-sm">
               {lightMode ? "Dark mode" : "Light mode"}
             </span>
           </button>
         </div>
       </nav>
       <main>
-        <section className="p-12 flex justify-between">
+        <section className="p-12 flex justify-between max-sm:flex-col">
           <div>
             <div className="relative mb-6">
               <div
@@ -179,7 +179,10 @@ function App() {
             }
             path="/country/:alpha3Code"
           />
-          <Route element={<Region lightMode={lightMode}/>} path="/region/:region" />
+          <Route
+            element={<Region lightMode={lightMode} />}
+            path="/region/:region"
+          />
         </Routes>
       </main>
     </div>
