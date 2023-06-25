@@ -25,7 +25,7 @@ function Country({ lightMode }: any) {
           </button>
         </a>
       </div>
-      <div className="flex flex-row p-16">
+      <div className="flex flex-row p-16 max-lg:flex-col max-lg:m-auto">
         <div>
           <img
             src={countryFound?.flag}
@@ -35,11 +35,11 @@ function Country({ lightMode }: any) {
         </div>
         <div
           className={
-            lightMode ? "p-8 text-black ml-20" : "p-8 text-white ml-20"
+            lightMode ? "p-8 text-black ml-20 max-md:ml-0" : "p-8 text-white ml-20 max-md:ml-0"
           }
         >
-          <h1 className="text-4xl font-black">{countryFound?.name}</h1>
-          <div className="flex flex-row">
+          <h1 className="text-4xl font-black max-lg:text-center">{countryFound?.name}</h1>
+          <div className="flex flex-row max-lg:flex-col m-auto">
             <div className="mt-10">
               <h5
                 className={
@@ -132,7 +132,7 @@ function Country({ lightMode }: any) {
                 </span>
               </h5>
             </div>
-            <div className="mt-10 ml-16">
+            <div className="mt-10 ml-16 max-lg:ml-0 max-lg:mt-0">
               <h5
                 className={
                   lightMode
