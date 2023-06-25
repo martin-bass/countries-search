@@ -25,7 +25,7 @@ function Country({ lightMode }: any) {
           </button>
         </a>
       </div>
-      <div className="flex flex-row p-16 max-lg:flex-col max-lg:m-auto">
+      <div className="flex flex-row p-16 max-lg:flex-col max-lg:m-auto max-mobile:p-4">
         <div>
           <img
             src={countryFound?.flag}
@@ -35,10 +35,10 @@ function Country({ lightMode }: any) {
         </div>
         <div
           className={
-            lightMode ? "p-8 text-black ml-20 max-md:ml-0" : "p-8 text-white ml-20 max-md:ml-0"
+            lightMode ? "p-8 text-black ml-20 max-md:ml-0 max-mobile:p-0" : "p-8 text-white ml-20 max-md:ml-0 max-mobile:p-0"
           }
         >
-          <h1 className="text-4xl font-black max-lg:text-center">{countryFound?.name}</h1>
+          <h1 className="text-4xl font-black max-lg:text-center max-mobile:mt-8">{countryFound?.name}</h1>
           <div className="flex flex-row max-lg:flex-col m-auto">
             <div className="mt-10">
               <h5
