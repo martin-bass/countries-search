@@ -31,7 +31,7 @@ function Card({ country, lightMode }: Props | any) {
               : "block font-black text-gray-300"
           }
         >
-          Pupulation:{" "}
+          Population:{" "}
           <span
             className={
               lightMode ? "font-thin text-black" : "font-thin text-white"
